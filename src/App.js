@@ -1,9 +1,7 @@
 import Todo from "./components/Todo";
 import { Route, Switch } from "react-router-dom";
-import AllMeetupsPage from "./pages/AllMeetups";
 import NewERC20Page from "./pages/NewERC20";
-import NewMeetupsPage from "./pages/NewMeetup";
-import FavoritePage from "./pages/Favorites";
+
 import MainNavigation from "./components/layout/MainNavigation";
 import Layout from "./components/layout/Layout";
 import { Web3ReactProvider } from "@web3-react/core";
@@ -32,9 +30,11 @@ function App() {
           <Route path="/new-erc20">
             <NewERC20Page />
           </Route>
-          <Route path="/transfer">
+          {/* <Route path="/transfer">
             <TransferPage />
-          </Route>
+          </Route> */}
+          <Route exact path="/detail/:id" component={TransferPage} />
+
           {/* <Route path="/favorites">
             <FavoritePage />
           </Route> */}

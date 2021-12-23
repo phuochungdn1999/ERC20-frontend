@@ -94,7 +94,7 @@ function TransferPage() {
   return (
     <section>
       <h1>Add new Token</h1>
-      <Transfer onAddToken={addERCHandler} />
+      <Transfer  />
     </section>
   );
 }

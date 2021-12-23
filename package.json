@@ -14,6 +14,7 @@
     "@usedapp/core": "^0.5.1",
     "add": "^2.0.6",
     "await-transaction-mined": "^1.0.12",
+    "bignumber.js": "^9.0.1",
     "bootstrap": "^5.1.1",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",

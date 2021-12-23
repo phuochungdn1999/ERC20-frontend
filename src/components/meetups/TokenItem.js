@@ -25,14 +25,23 @@ function TokenItem(props) {
     <li className={classes.item}>
       <Card>
         <div className={classes.image}>
-          <img src={props.image} alt={props.title} />
+          <img
+            src="https://media.istockphoto.com/photos/adorable-scottish-straight-cat-peeking-from-behind-a-banner-picture-id1097008888?k=20&m=1097008888&s=612x612&w=0&h=7g68qF4AnyJSd3-t4jnc9MO2AqqE5kCHEX50rTLxF_Q="
+            alt={props.title}
+          />
         </div>
         <div className={classes.content}>
+          {console.log(props)}
           <h3>Token Name: {props.name}</h3>
-          <p>{props.symbol}</p>
+          <p>Symbol: {props.symbol}</p>
           <p>Total Supply: {props.totalSupply}</p>
-          <p>Contract Address: {props.contract}</p>
-          <p>Deployer: {props.owner}</p>
+          <p>Vault Address: {props.vaultAddress}</p>
+          <p>VaultId: {props.vaultId}</p>
+          <p>ListingPrice: {props.listingPrice}</p>
+          <p>NFT address: {props.nft}</p>
+          <p>NFT id: {props.nftId}</p>
+          {props.state ? <p>Auction State: {props.state}</p> : null}
+          {props.reservePrice ? <p>Reserve Price: {props.reservePrice}</p> : null}
         </div>
         <div className={classes.actions}></div>
       </Card>

@@ -1,4 +1,3 @@
-import MeetupList from "../components/meetups/MeetupList";
 import { useState, useEffect } from "react";
 import TokenList from "../components/meetups/TokenList";
 
@@ -9,13 +8,14 @@ function AllTokensPage() {
   useEffect(() => {
     setIsLoading(true);
     fetch(
-      "https://crash-coure-2021-default-rtdb.asia-southeast1.firebasedatabase.app/token.json"
+      "https://nft-2021-a418f-default-rtdb.asia-southeast1.firebasedatabase.app/token.json"
     )
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         const meetups = [];
+        console.log(data);
         for (const key in data) {
           const meetup = {
             id: key,
